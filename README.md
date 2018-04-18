@@ -1,4 +1,4 @@
-# # Quer fazer parte da Superbid Webservices ?
+# Quer fazer parte da Superbid Webservices ?
 
 O teste consiste basicamente em algumas perguntas abaixo e um teste pratico, basta clonar o repositÃrio responder as perguntas no próprio README.md e submeter o pull request.
 
