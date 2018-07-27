@@ -1,0 +1,1656 @@
+{
+	"info": {
+		"_postman_id": "162581b6-a8c5-47c0-826f-64c22a5fa0ea",
+		"name": "Superbid Blog",
+		"description": "Superbid Webservices's blog API test collection.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Validação de setup inicial",
+			"description": "Requisições para validação de funcionamento de uma aplicação que acabou de ser inicializada, com nenhum conteúdo.",
+			"item": [
+				{
+					"name": "Validação de listagem inicial vazia",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b5e377ae-62b4-419a-adec-99f79b2da5f5",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem inicial deve possuir todas as propriedades de paginação\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.empty;",
+									"    pm.expect(jsonData).to.have.all.keys('content', 'totalPages', 'totalElements', 'last', 'size', 'number', 'first', 'sort', 'numberOfElements');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem inicial deve vir vazia\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.an('array').that.is.empty;",
+									"    pm.expect(jsonData.totalPages).to.be.equal(0);",
+									"    pm.expect(jsonData.totalElements).to.be.equal(0);",
+									"    pm.expect(jsonData.last).to.be.true;",
+									"    pm.expect(jsonData.size).to.be.equal(20);",
+									"    pm.expect(jsonData.number).to.be.equal(0);",
+									"    pm.expect(jsonData.first).to.be.true;",
+									"    pm.expect(jsonData.sort).to.be.null;",
+									"    pm.expect(jsonData.numberOfElements).to.be.equal(0);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Na inicialização da aplicação, a listagem de posts deve estar funcionando e retornando um objeto paginado, com conteúdo vazio."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de listagem inicial por ID vazia",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "925d7c51-2a03-4c56-a1dd-0f42d7da1ccc",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Listagem inicial de post por ID deve vir vazia\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Na inicialização da aplicação, não há nenhum post. Portanto, a listagem de post por um ID não deve retornar nada (código 404)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Valiação de criação de um post",
+			"description": "Testes de validação de criação de posts.",
+			"item": [
+				{
+					"name": "Validação de criação de primeiro post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bda48fc7-a2a7-4b51-921d-65a5224a857e",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a criação de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Criação de posts deve retornar link para post criado no cabeçalho\", function () {",
+									"    pm.response.to.have.header(\"Location\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"First post!\",\n\t\"description\": \"First post of the blog.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Valida o funcionamento da criação de post."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de listagem por ID=1 após criação de um post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5d03d7a3-17a1-4d7c-a3ca-702f6dcb02fd",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts por ID=1 agora está retornando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Listagem de post por ID=1 deve retornar primeiro post criado\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.equal(1);",
+									"    pm.expect(jsonData.title).to.be.equal(\"First post!\");",
+									"    pm.expect(jsonData.description).to.be.equal(\"First post of the blog.\");",
+									"    // pm.expect(jsonData.publishedDate).to.be.equal(\"2018-07-25\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Após a criação de um post, a requisição usando ID=1 deve retornar o post criado."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de listagem após criação de um post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8c9af991-a38f-4dd5-95d0-c0a5512c8f0e",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem após criação deve possuir todas as propriedades de paginação\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.all.keys('content', 'totalPages', 'totalElements', 'last', 'size', 'number', 'first', 'sort', 'numberOfElements');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem após criação deve conter um elemento\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.an('array').that.is.not.empty;",
+									"    pm.expect(jsonData.totalPages).to.be.equal(1);",
+									"    pm.expect(jsonData.totalElements).to.be.equal(1);",
+									"    pm.expect(jsonData.last).to.be.true;",
+									"    pm.expect(jsonData.size).to.be.equal(20);",
+									"    pm.expect(jsonData.number).to.be.equal(0);",
+									"    pm.expect(jsonData.first).to.be.true;",
+									"    pm.expect(jsonData.sort).to.be.null;",
+									"    pm.expect(jsonData.numberOfElements).to.be.equal(1);",
+									"});",
+									"",
+									"pm.test(\"Listagem após criação deve conter o primeiro post criado\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var firstPost = jsonData.content[0];",
+									"    pm.expect(firstPost.id).to.be.equal(1);",
+									"    pm.expect(firstPost.title).to.be.equal(\"First post!\");",
+									"    pm.expect(firstPost.description).to.be.equal(\"First post of the blog.\");",
+									"    // pm.expect(firstPost.publishedDate).to.be.equal(\"2018-07-25\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Após a criação de um post, a listagem deve retornar um elemento."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Validação de edição de um post",
+			"description": "Testes de validação de edição de posts.",
+			"item": [
+				{
+					"name": "Validação de edição de primeiro post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "555fce37-5fa7-4bd0-98e4-6deb65b07e50",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a edição de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"First updated post!\",\n\t\"description\": \"First post of the blog - updated!.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Valida o funcionamento da edição de post."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação erro em edição de post inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5b0f31bf-65f1-422c-af19-254c0fc9fe0a",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a edição de posts inexistentes retorna erro adequado\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"First post!\",\n\t\"description\": \"First post of the blog.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"10"
+							]
+						},
+						"description": "Valida o funcionamento da edição de post para um post inexistente."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de listagem por ID=1 após edição de um post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eb1811b0-fcae-408b-8517-acf1a0b1569d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts por ID=1 agora está retornando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem de post por ID=1 deve retornar primeiro post criado\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.equal(1);",
+									"    pm.expect(jsonData.title).to.be.equal(\"First updated post!\");",
+									"    pm.expect(jsonData.description).to.be.equal(\"First post of the blog - updated!.\");",
+									"    // pm.expect(jsonData.publishedDate).to.be.equal(\"2018-07-25\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Após a edição do post de ID=1, a requisição usando ID=1 deve retornar o post com os dados alterados."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Validação de remoção de post",
+			"description": "Testes de validação de remoção de posts.",
+			"item": [
+				{
+					"name": "Validação de remoção de post existente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "855716a6-dc40-450e-9721-60c670347360",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a remoção de post existente está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Executa remoção de post existente."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de remoção de post inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "85ebbbc3-289a-4182-b2a1-5c757a179e1e",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a remoção de post inexistente retorna erro\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"100"
+							]
+						},
+						"description": "Executa remoção de post inexistente, devendo retornar erro."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de listagem após remoção de post vazia",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d45574fe-4053-4b19-af9f-3fabb0901f2c",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts após remoação está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Listagem após remoção deve vir vazia\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.an('array').that.is.empty;",
+									"    pm.expect(jsonData.totalPages).to.be.equal(0);",
+									"    pm.expect(jsonData.totalElements).to.be.equal(0);",
+									"    pm.expect(jsonData.last).to.be.true;",
+									"    pm.expect(jsonData.size).to.be.equal(20);",
+									"    pm.expect(jsonData.number).to.be.equal(0);",
+									"    pm.expect(jsonData.first).to.be.true;",
+									"    pm.expect(jsonData.sort).to.be.null;",
+									"    pm.expect(jsonData.numberOfElements).to.be.equal(0);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Após a remoção do post criado, a listagem de posts deve estar funcionando e retornando um objeto paginado, com conteúdo vazio."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de listagem após remoção por ID vazia",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "925d7c51-2a03-4c56-a1dd-0f42d7da1ccc",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Listagem inicial de post por ID deve vir vazia\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Após a remoção do post criado, não há nenhum post. Portanto, a listagem de post por um ID não deve retornar nada (código 404)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Validação de criação de diversos posts",
+			"description": "Testes de criação de posts, utilizando variação nos dados de entrada.",
+			"item": [
+				{
+					"name": "Validação de criação de post sem descrição",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5ef32db3-ef6d-44f2-9bb0-f829dc740bcc",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a criação de posts sem informar descrição está funcionando\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Criação de posts deve retornar link para post criado no cabeçalho\", function () {",
+									"    pm.response.to.have.header(\"Location\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Second post!\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Valida o funcionamento da criação de post sem informar descrição."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na criação de post sem título",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5251fe8-1c09-4e31-be05-18f9f280c7d8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a criação de posts sem informar título deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\": \"Third post of the blog.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Valida o funcionamento da criação de post sem informar título, que deve resultar em erro."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na criação de post com título curto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5251fe8-1c09-4e31-be05-18f9f280c7d8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a criação de posts sem informar título deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Ab\",\n\t\"description\": \"Post with a very short title.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Valida o funcionamento da criação de post, que deve resultar em erro caso o título seja muito curto."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na criação de post com título longo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5251fe8-1c09-4e31-be05-18f9f280c7d8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a criação de posts sem informar título deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"A very very very very very very very very very very very very veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong title that will nooooooooooooooooooooooooooooooooooooooooooooot fiiiiiit into the field maximum size.\",\n\t\"description\": \"Description for a post with a very long title.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Valida o funcionamento da criação de post, que deve resultar em erro caso o título seja muito longo."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na criação de post com descrição longa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5251fe8-1c09-4e31-be05-18f9f280c7d8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a criação de posts sem informar título deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"title\": \"Post with long description\",\n\t\"description\": \"A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong description that will nooooooooooooooooooooooooooooooooooooooooooooot fiiiiiit into the field maximum size.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Valida o funcionamento da criação de post, que deve resultar em erro caso a descrição seja muito longa."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na criação de post sem nenhum dado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eeddeefd-09d6-4df4-9a42-afc2b6329bd9",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a criação de posts sem informar dado deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Valida o funcionamento da criação de post sem informar nenhum dado, que deve resultar em erro."
+					},
+					"response": []
+				},
+				{
+					"name": "Criação de um terceiro post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "124ee171-7646-4a71-a2f4-23426c047980",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se criação de posts adicionais está funcionando\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Criação de posts deve retornar link para post criado no cabeçalho\", function () {",
+									"    pm.response.to.have.header(\"Location\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Third post!\",\n\t\"description\": \"Third post of the blog.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Aciona a criação de um terceiro post, para validação de operações com múltiplos itens."
+					},
+					"response": []
+				},
+				{
+					"name": "Criação de um quarto post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "124ee171-7646-4a71-a2f4-23426c047980",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se criação de posts adicionais está funcionando\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Criação de posts deve retornar link para post criado no cabeçalho\", function () {",
+									"    pm.response.to.have.header(\"Location\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Fourth post!\",\n\t\"description\": \"Fourth post of the blog.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Aciona a criação de um quarto post, para validação de operações com múltiplos itens."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de listagem com diversos posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cb2d9fa3-f25b-477c-81f4-1f1ca0207553",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem após criação deve possuir todas as propriedades de paginação\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.all.keys('content', 'totalPages', 'totalElements', 'last', 'size', 'number', 'first', 'sort', 'numberOfElements');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem após criação deve conter um elemento\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.an('array').that.is.not.empty;",
+									"    pm.expect(jsonData.totalPages).to.be.equal(1);",
+									"    pm.expect(jsonData.totalElements).to.be.equal(3);",
+									"    pm.expect(jsonData.last).to.be.true;",
+									"    pm.expect(jsonData.size).to.be.equal(20);",
+									"    pm.expect(jsonData.number).to.be.equal(0);",
+									"    pm.expect(jsonData.first).to.be.true;",
+									"    pm.expect(jsonData.sort).to.be.null;",
+									"    pm.expect(jsonData.numberOfElements).to.be.equal(3);",
+									"});",
+									"",
+									"pm.test(\"Listagem após criação deve conter os três posts criados\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var secondPost = jsonData.content[0];",
+									"    pm.expect(secondPost.id).to.be.equal(2);",
+									"    pm.expect(secondPost.title).to.be.equal(\"Second post!\");",
+									"    pm.expect(secondPost.description).to.be.equal(\"Second post!\");// Created without description, thus, its description is equal to its title",
+									"    // pm.expect(secondPost.publishedDate).to.be.equal(\"2018-07-25\");",
+									"    ",
+									"    var thirdPost = jsonData.content[1];",
+									"    pm.expect(thirdPost.id).to.be.equal(3);",
+									"    pm.expect(thirdPost.title).to.be.equal(\"Third post!\");",
+									"    pm.expect(thirdPost.description).to.be.equal(\"Third post of the blog.\");",
+									"    // pm.expect(thirdPost.publishedDate).to.be.equal(\"2018-07-25\");",
+									"    ",
+									"    var fourthPost = jsonData.content[2];",
+									"    pm.expect(fourthPost.id).to.be.equal(4);",
+									"    pm.expect(fourthPost.title).to.be.equal(\"Fourth post!\");",
+									"    pm.expect(fourthPost.description).to.be.equal(\"Fourth post of the blog.\");",
+									"    // pm.expect(fourthPost.publishedDate).to.be.equal(\"2018-07-25\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Após a criação de diversos posts, a listagem deve retornar todos os elementos."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Validação de parâmetros de listagem com múltiplos posts",
+			"description": "Testes de validação de listagem com diversos elementos, incluindo testes de paginação.",
+			"item": [
+				{
+					"name": "Validação de parâmetro page na listagem de posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4a69a9ad-4b0f-483c-8d40-2b4d1db59927",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Listagem deve conter três elementos na primeira página\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.an('array').that.is.not.empty;",
+									"    pm.expect(jsonData.totalPages).to.be.equal(1);",
+									"    pm.expect(jsonData.totalElements).to.be.equal(3);",
+									"    pm.expect(jsonData.last).to.be.true;",
+									"    pm.expect(jsonData.size).to.be.equal(20);",
+									"    pm.expect(jsonData.number).to.be.equal(0);",
+									"    pm.expect(jsonData.first).to.be.true;",
+									"    pm.expect(jsonData.sort).to.be.null;",
+									"    pm.expect(jsonData.numberOfElements).to.be.equal(3);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts?page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						},
+						"description": "Após a criação de três posts, a listagem deve retornar todos os elementos em um única página quando page=0."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de parâmetro page inválido na listagem de posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9986bcd8-5c8c-4b7e-afc8-126eb3a69acf",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Listagem não deve conter nenhum elemento nesta página\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.an('array').that.is.empty;",
+									"    pm.expect(jsonData.totalPages).to.be.equal(1);",
+									"    pm.expect(jsonData.totalElements).to.be.equal(3);",
+									"    pm.expect(jsonData.last).to.be.true;",
+									"    pm.expect(jsonData.size).to.be.equal(20);",
+									"    pm.expect(jsonData.number).to.be.equal(1);",
+									"    pm.expect(jsonData.first).to.be.false;",
+									"    pm.expect(jsonData.sort).to.be.null;",
+									"    pm.expect(jsonData.numberOfElements).to.be.equal(0);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Após a criação de três posts, a listagem deve retornar nenhum elemento quando page=1."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de parâmetro size na listagem de posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "533f8919-037c-40b4-92a0-1b039dff7266",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Listagem deve conter 2 elementos na primeira página e possuir duas páginas\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.an('array').that.is.not.empty;",
+									"    pm.expect(jsonData.totalPages).to.be.equal(2);",
+									"    pm.expect(jsonData.totalElements).to.be.equal(3);",
+									"    pm.expect(jsonData.last).to.be.false;",
+									"    pm.expect(jsonData.size).to.be.equal(2);",
+									"    pm.expect(jsonData.number).to.be.equal(0);",
+									"    pm.expect(jsonData.first).to.be.true;",
+									"    pm.expect(jsonData.sort).to.be.null;",
+									"    pm.expect(jsonData.numberOfElements).to.be.equal(2);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts?size=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						},
+						"description": "Após a criação de três posts, a listagem deve retornar dois elementos na primeira página quando size=2."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação dos parâmetros page e size na listagem de posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "42ab584f-a960-44e8-8c0b-30f8c257cd00",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Listagem deve conter 1 elemento na segunda página e possuir duas páginas\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.an('array').that.is.not.empty;",
+									"    pm.expect(jsonData.totalPages).to.be.equal(2);",
+									"    pm.expect(jsonData.totalElements).to.be.equal(3);",
+									"    pm.expect(jsonData.last).to.be.true;",
+									"    pm.expect(jsonData.size).to.be.equal(2);",
+									"    pm.expect(jsonData.number).to.be.equal(1);",
+									"    pm.expect(jsonData.first).to.be.false;",
+									"    pm.expect(jsonData.sort).to.be.null;",
+									"    pm.expect(jsonData.numberOfElements).to.be.equal(1);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts?size=2&page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Após a criação de três posts, a listagem deve retornar um elementos na segunda página quando page=1 e size=2."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Validação de edição de diversos posts",
+			"description": "Testes de criação de posts, utilizando variação nos dados de entrada.",
+			"item": [
+				{
+					"name": "Validação de edição de post sem descrição",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "012dbfe4-1f53-4b65-8c1f-a61379d0be6f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a edição de posts sem informar descrição está funcionando\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Second post - updated!\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"2"
+							]
+						},
+						"description": "Valida o funcionamento da edição de post sem informar descrição."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de listagem por ID=2 após edição de um post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c71e2da0-0a12-4604-8e6b-4da0c2221923",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts por ID=2 está retornando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem de post por ID=2 deve retornar segundo post, editado e com título igual a descrição\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.id).to.be.equal(2);",
+									"    pm.expect(jsonData.title).to.be.equal(\"Second post - updated!\");",
+									"    pm.expect(jsonData.description).to.be.equal(\"Second post - updated!\");",
+									"    // pm.expect(jsonData.publishedDate).to.be.equal(\"2018-07-26\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"2"
+							]
+						},
+						"description": "Após a edição do post de ID=2, a requisição usando ID=2 deve retornar o post com os dados alterados. A descrição deve ter sido alterada para o título."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na edição de post sem título",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4588a62c-e2db-4e7b-9726-ada42ae008c9",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a edição de posts sem informar título deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\": \"Third post of the blog - updated.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"3"
+							]
+						},
+						"description": "Valida o funcionamento da edição de post sem informar título, que deve resultar em erro."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na edição de post com título curto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4681d072-dd61-474a-9481-04472ece8f22",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a edição de posts sem informar título deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Ab\",\n\t\"description\": \"Post with a very short title - updated.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"3"
+							]
+						},
+						"description": "Valida o funcionamento da edição de post, que deve resultar em erro caso o título seja muito curto."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na edição de post com título longo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "316d7c9b-7b6f-442f-a7fc-61720833561f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a edição de posts sem informar título deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"A very very very very very very very very very very very very veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong title that will nooooooooooooooooooooooooooooooooooooooooooooot fiiiiiit into the field maximum size.\",\n\t\"description\": \"Description for a post with a very long title - updated.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"3"
+							]
+						},
+						"description": "Valida o funcionamento da edição de post, que deve resultar em erro caso o título seja muito longo."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na edição de post com descrição longa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "08662547-b2da-4fd8-9d9d-3865c772bf86",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a edição de posts sem informar título deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"title\": \"Post with long description - updated\",\n\t\"description\": \"A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very veeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeery loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong description that will nooooooooooooooooooooooooooooooooooooooooooooot fiiiiiit into the field maximum size.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"3"
+							]
+						},
+						"description": "Valida o funcionamento da edição de post, que deve resultar em erro caso a descrição seja muito longa."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de erro na edição de post sem nenhum dado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "51531622-54af-4ece-97aa-985e200f0402",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a edição de posts sem informar dado deve retornar erro\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/posts/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts",
+								"3"
+							]
+						},
+						"description": "Valida o funcionamento da edição de post sem informar nenhum dado, que deve resultar em erro."
+					},
+					"response": []
+				},
+				{
+					"name": "Validação de listagem com diversos posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b1ec283e-681d-45bd-a342-04aceb7c91a3",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Verifica se a listagem de posts está funcionando\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem após edição deve possuir todas as propriedades de paginação\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.all.keys('content', 'totalPages', 'totalElements', 'last', 'size', 'number', 'first', 'sort', 'numberOfElements');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Listagem após criação deve conter um elemento\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.content).to.be.an('array').that.is.not.empty;",
+									"    pm.expect(jsonData.totalPages).to.be.equal(1);",
+									"    pm.expect(jsonData.totalElements).to.be.equal(3);",
+									"    pm.expect(jsonData.last).to.be.true;",
+									"    pm.expect(jsonData.size).to.be.equal(20);",
+									"    pm.expect(jsonData.number).to.be.equal(0);",
+									"    pm.expect(jsonData.first).to.be.true;",
+									"    pm.expect(jsonData.sort).to.be.null;",
+									"    pm.expect(jsonData.numberOfElements).to.be.equal(3);",
+									"});",
+									"",
+									"pm.test(\"Listagem após criação deve conter os três posts criados\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var secondPost = jsonData.content[0];",
+									"    pm.expect(secondPost.id).to.be.equal(2);",
+									"    pm.expect(secondPost.title).to.be.equal(\"Second post - updated!\");",
+									"    pm.expect(secondPost.description).to.be.equal(\"Second post - updated!\");// Updated without description, thus, its description is equal to its title",
+									"    // pm.expect(secondPost.publishedDate).to.be.equal(\"2018-07-26\");",
+									"    ",
+									"    var thirdPost = jsonData.content[1];",
+									"    pm.expect(thirdPost.id).to.be.equal(3);",
+									"    pm.expect(thirdPost.title).to.be.equal(\"Third post!\");",
+									"    pm.expect(thirdPost.description).to.be.equal(\"Third post of the blog.\");",
+									"    // pm.expect(thirdPost.publishedDate).to.be.equal(\"2018-07-26\");",
+									"    ",
+									"    var fourthPost = jsonData.content[2];",
+									"    pm.expect(fourthPost.id).to.be.equal(4);",
+									"    pm.expect(fourthPost.title).to.be.equal(\"Fourth post!\");",
+									"    pm.expect(fourthPost.description).to.be.equal(\"Fourth post of the blog.\");",
+									"    // pm.expect(fourthPost.publishedDate).to.be.equal(\"2018-07-26\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Após a criação de diversos posts, a listagem deve retornar todos os elementos."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
