@@ -1,0 +1,1417 @@
+22-08-2018 15:47:01.936 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 28616 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 15:47:01.940 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 15:47:02.012 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1184ab05: startup date [Wed Aug 22 15:47:02 BRT 2018]; root of context hierarchy
+22-08-2018 15:47:03.214 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ca53dd09] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 15:47:03.618 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 15:47:03.668 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 15:47:03.669 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 15:47:03.681 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 15:47:03.848 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 15:47:03.848 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1836 ms
+22-08-2018 15:47:03.920 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 15:47:03.924 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 15:47:03.926 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 15:47:03.927 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 15:47:03.927 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 15:47:04.082 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 15:47:04.387 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 15:47:04.440 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 15:47:04.457 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 15:47:04.526 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 15:47:04.527 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 15:47:04.561 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 15:47:04.662 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 15:47:05.154 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6d091cad'
+22-08-2018 15:47:05.156 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 15:47:05.648 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22-08-2018 15:47:05.898 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1184ab05: startup date [Wed Aug 22 15:47:02 BRT 2018]; root of context hierarchy
+22-08-2018 15:47:05.936 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22-08-2018 15:47:05.964 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/testar],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.leo.core.entity.Post> com.leo.ws.controllers.BlogResources.testarArquitetura()
+22-08-2018 15:47:05.968 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+22-08-2018 15:47:05.968 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+22-08-2018 15:47:05.990 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22-08-2018 15:47:05.990 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22-08-2018 15:47:06.208 INFO  [main] o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+22-08-2018 15:47:06.209 INFO  [main] o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+22-08-2018 15:47:06.213 INFO  [main] o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+22-08-2018 15:47:06.244 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+22-08-2018 15:47:06.246 INFO  [main] com.leo.ws.BlogApiStarter.logStarted - Started BlogApiStarter in 4.726 seconds (JVM running for 5.049)
+22-08-2018 15:47:21.859 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+22-08-2018 15:47:21.860 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+22-08-2018 15:47:21.891 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+22-08-2018 15:47:21.940 INFO  [http-nio-8080-exec-1] com.leo.ws.controllers.BlogResources.testarArquitetura - passou muleque!!!!
+22-08-2018 17:15:32.020 INFO  [Thread-4] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1184ab05: startup date [Wed Aug 22 15:47:02 BRT 2018]; root of context hierarchy
+22-08-2018 17:15:32.021 INFO  [Thread-4] o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+22-08-2018 17:15:32.025 INFO  [Thread-4] o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+22-08-2018 17:15:32.028 INFO  [Thread-4] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 17:15:32.029 INFO  [Thread-4] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 17:15:32.039 INFO  [Thread-4] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 17:15:32.054 INFO  [Thread-4] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:25:54.668 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 7074 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:25:54.672 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:25:54.731 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@20d28811: startup date [Wed Aug 22 18:25:54 BRT 2018]; root of context hierarchy
+22-08-2018 18:25:55.876 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$25ab098] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:25:56.349 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:25:56.393 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:25:56.394 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:25:56.405 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:25:56.584 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:25:56.584 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1853 ms
+22-08-2018 18:25:56.648 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:25:56.651 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:25:56.653 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:25:56.654 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:25:56.654 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:25:56.868 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:25:57.136 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:25:57.191 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:25:57.215 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:25:57.284 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:25:57.286 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:25:57.316 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:25:57.415 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:25:57.828 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6ca30b8a'
+22-08-2018 18:25:57.831 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:25:57.845 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:25:57.845 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:25:57.845 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:25:57.849 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:25:57.851 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:25:57.853 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:25:57.864 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:25:57.940 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:28:27.887 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 7213 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:28:27.891 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:28:27.956 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ac13091: startup date [Wed Aug 22 18:28:27 BRT 2018]; root of context hierarchy
+22-08-2018 18:28:29.215 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$578c281f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:28:29.621 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:28:29.668 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:28:29.669 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:28:29.681 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:28:29.833 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:28:29.834 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1878 ms
+22-08-2018 18:28:29.909 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:28:29.915 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:28:29.917 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:28:29.917 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:28:29.917 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:28:30.119 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:28:30.390 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:28:30.450 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:28:30.467 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:28:30.542 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:28:30.543 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:28:30.577 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:28:30.677 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:28:31.073 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@21263314'
+22-08-2018 18:28:31.076 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:28:31.090 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:28:31.091 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:28:31.091 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:28:31.095 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:28:31.098 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:28:31.100 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:28:31.112 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:28:31.175 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:30:16.200 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 7336 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:30:16.204 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:30:16.259 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69b2283a: startup date [Wed Aug 22 18:30:16 BRT 2018]; root of context hierarchy
+22-08-2018 18:30:17.463 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bd8fc63d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:30:17.867 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:30:17.903 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:30:17.904 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:30:17.917 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:30:18.047 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:30:18.047 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1788 ms
+22-08-2018 18:30:18.117 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:30:18.121 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:30:18.123 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:30:18.124 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:30:18.124 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:30:18.323 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:30:18.589 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:30:18.657 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:30:18.684 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:30:18.785 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:30:18.788 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:30:18.822 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:30:18.921 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:30:19.335 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@b0fd744'
+22-08-2018 18:30:19.337 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:30:19.353 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:30:19.353 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:30:19.353 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:30:19.357 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:30:19.359 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:30:19.361 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:30:19.377 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:30:19.447 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:30:56.585 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 7385 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:30:56.589 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:30:56.628 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e316c74: startup date [Wed Aug 22 18:30:56 BRT 2018]; root of context hierarchy
+22-08-2018 18:30:57.797 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27dbef8a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:30:58.236 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:30:58.279 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:30:58.280 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:30:58.289 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:30:58.406 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:30:58.407 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1779 ms
+22-08-2018 18:30:58.505 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:30:58.530 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:30:58.532 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:30:58.532 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:30:58.532 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:30:58.701 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:30:58.921 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:30:58.975 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:30:58.991 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:30:59.063 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:30:59.065 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:30:59.097 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:30:59.191 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:30:59.598 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@70f68288'
+22-08-2018 18:30:59.601 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:30:59.618 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:30:59.619 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:30:59.619 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:30:59.623 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:30:59.624 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:30:59.627 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:30:59.639 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:30:59.702 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:31:17.046 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 7439 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:31:17.049 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:31:17.106 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@65466a6a: startup date [Wed Aug 22 18:31:17 BRT 2018]; root of context hierarchy
+22-08-2018 18:31:18.239 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e865230e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:31:18.655 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:31:18.693 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:31:18.694 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:31:18.704 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:31:18.858 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:31:18.859 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1753 ms
+22-08-2018 18:31:18.916 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:31:18.921 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:31:18.923 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:31:18.923 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:31:18.924 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:31:19.134 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:31:19.380 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:31:19.461 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:31:19.492 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:31:19.580 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:31:19.581 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:31:19.622 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:31:19.744 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:31:20.234 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@62a68bcb'
+22-08-2018 18:31:20.240 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:31:20.258 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:31:20.258 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:31:20.258 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:31:20.262 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:31:20.264 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:31:20.267 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:31:20.281 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:31:20.354 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:32:10.185 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 7522 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:32:10.190 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:32:10.256 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49c386c8: startup date [Wed Aug 22 18:32:10 BRT 2018]; root of context hierarchy
+22-08-2018 18:32:11.408 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2edb8ef6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:32:11.821 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:32:11.856 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:32:11.856 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:32:11.868 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:32:12.008 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:32:12.009 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1753 ms
+22-08-2018 18:32:12.084 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:32:12.087 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:32:12.088 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:32:12.088 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:32:12.088 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:32:12.287 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:32:12.513 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:32:12.556 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:32:12.572 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:32:12.643 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:32:12.644 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:32:12.680 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:32:12.774 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:32:13.171 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@43c57161'
+22-08-2018 18:32:13.173 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:32:13.188 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:32:13.189 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:32:13.189 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:32:13.193 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:32:13.194 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:32:13.197 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:32:13.211 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:32:13.282 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:33:18.630 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 7609 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:33:18.634 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:33:18.709 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e316c74: startup date [Wed Aug 22 18:33:18 BRT 2018]; root of context hierarchy
+22-08-2018 18:33:19.964 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$25ab098] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:33:20.348 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:33:20.385 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:33:20.386 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:33:20.399 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:33:20.530 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:33:20.534 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1825 ms
+22-08-2018 18:33:20.605 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:33:20.609 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:33:20.612 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:33:20.613 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:33:20.619 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:33:20.790 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:33:21.073 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:33:21.133 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:33:21.156 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:33:21.245 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:33:21.247 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:33:21.282 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:33:21.386 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:33:21.817 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6ca30b8a'
+22-08-2018 18:33:21.820 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:33:21.836 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:33:21.836 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:33:21.837 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:33:21.840 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:33:21.842 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:33:21.844 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:33:21.857 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:33:21.932 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:33:40.293 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 7663 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:33:40.306 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:33:40.367 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@56528192: startup date [Wed Aug 22 18:33:40 BRT 2018]; root of context hierarchy
+22-08-2018 18:33:41.547 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$578c281f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:33:41.914 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:33:41.937 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:33:41.937 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:33:41.947 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:33:42.043 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:33:42.044 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1677 ms
+22-08-2018 18:33:42.090 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:33:42.112 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:33:42.112 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:33:42.113 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:33:42.113 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:33:42.255 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:33:42.477 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:33:42.529 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:33:42.546 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:33:42.619 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:33:42.620 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:33:42.652 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:33:42.749 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:33:43.150 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@21263314'
+22-08-2018 18:33:43.152 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:33:43.167 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:33:43.167 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:33:43.168 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:33:43.171 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:33:43.183 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:33:43.185 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:33:43.197 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:33:43.268 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:37:54.497 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 7899 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:37:54.500 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:37:54.563 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@75329a49: startup date [Wed Aug 22 18:37:54 BRT 2018]; root of context hierarchy
+22-08-2018 18:37:55.751 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2b0d92da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:37:56.176 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:37:56.212 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:37:56.212 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:37:56.223 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:37:56.368 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:37:56.369 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1806 ms
+22-08-2018 18:37:56.434 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:37:56.441 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:37:56.442 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:37:56.442 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:37:56.442 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:37:56.622 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:37:56.918 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:37:56.967 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:37:56.983 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:37:57.053 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:37:57.054 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:37:57.092 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:37:57.191 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:37:57.596 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@58658f63'
+22-08-2018 18:37:57.598 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:37:57.614 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:37:57.615 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:37:57.615 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:37:57.619 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:37:57.621 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:37:57.624 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:37:57.642 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:37:57.708 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:39:38.731 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 8078 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:39:38.734 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:39:38.793 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7adda9cc: startup date [Wed Aug 22 18:39:38 BRT 2018]; root of context hierarchy
+22-08-2018 18:39:39.970 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$36008335] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:39:40.315 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:39:40.339 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:39:40.339 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:39:40.349 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:39:40.459 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:39:40.459 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1666 ms
+22-08-2018 18:39:40.501 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:39:40.505 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:39:40.505 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:39:40.505 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:39:40.505 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:39:40.648 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:39:40.868 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:39:40.954 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:39:40.981 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:39:41.097 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:39:41.098 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:39:41.136 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:39:41.250 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:39:41.744 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5a545b0f'
+22-08-2018 18:39:41.747 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:39:41.763 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:39:41.763 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:39:41.763 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:39:41.771 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:39:41.774 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:39:41.779 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:39:41.790 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:39:41.889 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:41:03.750 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 8155 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:41:03.753 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:41:03.800 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@96def03: startup date [Wed Aug 22 18:41:03 BRT 2018]; root of context hierarchy
+22-08-2018 18:41:04.923 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3e90b041] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:41:05.280 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:41:05.309 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:41:05.310 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:41:05.320 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:41:05.490 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:41:05.490 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1690 ms
+22-08-2018 18:41:05.563 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:41:05.575 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:41:05.575 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:41:05.576 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:41:05.576 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:41:05.730 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:41:06.002 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:41:06.092 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:41:06.114 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:41:06.203 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:41:06.205 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:41:06.247 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:41:06.354 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:41:06.768 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@428bdd72'
+22-08-2018 18:41:06.774 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:41:06.788 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:41:06.788 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:41:06.789 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:41:06.792 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:41:06.794 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:41:06.797 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:41:06.810 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:41:06.880 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:44:51.212 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 8363 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:44:51.215 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:44:51.291 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1ed1993a: startup date [Wed Aug 22 18:44:51 BRT 2018]; root of context hierarchy
+22-08-2018 18:44:52.627 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$591d0c4c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:44:53.014 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:44:53.049 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:44:53.050 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:44:53.059 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:44:53.216 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:44:53.218 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1926 ms
+22-08-2018 18:44:53.281 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:44:53.285 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:44:53.286 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:44:53.287 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:44:53.294 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:44:53.499 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:44:53.818 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:44:53.892 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:44:53.913 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:44:53.993 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:44:53.995 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:44:54.032 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:44:54.137 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:44:54.542 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7efa3f63'
+22-08-2018 18:44:54.544 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:44:54.558 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:44:54.559 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:44:54.559 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:44:54.562 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:44:54.572 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:44:54.575 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:44:54.585 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:44:54.653 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:47:05.214 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 8483 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:47:05.221 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:47:05.285 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c9f8c13: startup date [Wed Aug 22 18:47:05 BRT 2018]; root of context hierarchy
+22-08-2018 18:47:06.701 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$84f7773b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:47:07.125 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:47:07.179 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:47:07.180 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:47:07.189 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:47:07.329 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:47:07.330 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2044 ms
+22-08-2018 18:47:07.413 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:47:07.417 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:47:07.418 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:47:07.418 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:47:07.418 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:47:07.562 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:47:07.819 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:47:07.869 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:47:07.886 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:47:07.962 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:47:07.965 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:47:08.003 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:47:08.117 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:47:08.554 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@e280403'
+22-08-2018 18:47:08.557 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:47:08.571 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:47:08.572 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:47:08.572 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:47:08.575 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:47:08.577 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:47:08.579 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:47:08.592 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:47:08.660 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:48:55.444 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 8631 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:48:55.451 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:48:55.518 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60d8c9b7: startup date [Wed Aug 22 18:48:55 BRT 2018]; root of context hierarchy
+22-08-2018 18:48:56.703 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ddddcb7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:48:57.119 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:48:57.156 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:48:57.157 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:48:57.169 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:48:57.293 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:48:57.294 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1776 ms
+22-08-2018 18:48:57.351 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:48:57.358 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:48:57.359 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:48:57.360 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:48:57.370 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:48:57.535 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:48:57.810 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:48:57.861 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:48:57.878 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:48:57.949 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:48:57.950 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:48:57.982 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:48:58.083 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:48:58.468 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7112ce6'
+22-08-2018 18:48:58.470 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:48:58.484 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:48:58.484 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:48:58.484 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:48:58.488 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:48:58.490 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:48:58.492 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:48:58.504 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:48:58.568 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 18:58:25.958 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 9207 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 18:58:25.961 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 18:58:26.008 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e316c74: startup date [Wed Aug 22 18:58:26 BRT 2018]; root of context hierarchy
+22-08-2018 18:58:27.391 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$591d0c4c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 18:58:27.824 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 18:58:27.859 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 18:58:27.859 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 18:58:27.872 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 18:58:27.978 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 18:58:27.978 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1970 ms
+22-08-2018 18:58:28.044 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 18:58:28.047 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 18:58:28.048 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 18:58:28.048 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 18:58:28.048 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 18:58:28.224 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 18:58:28.453 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 18:58:28.506 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:58:28.524 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 18:58:28.592 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 18:58:28.599 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 18:58:28.639 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 18:58:28.751 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 18:58:29.162 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7134b8a7'
+22-08-2018 18:58:29.164 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:58:29.178 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 18:58:29.179 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 18:58:29.179 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 18:58:29.183 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 18:58:29.184 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 18:58:29.187 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 18:58:29.198 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 18:58:29.264 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:00:38.770 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 9396 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:00:38.773 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:00:38.826 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@47542153: startup date [Wed Aug 22 19:00:38 BRT 2018]; root of context hierarchy
+22-08-2018 19:00:38.935 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.leo.ws.BlogApiStarter]; nested exception is java.io.FileNotFoundException: class path resource [CoreConfig.class] cannot be opened because it does not exist
+22-08-2018 19:00:39.155 ERROR [main] o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.leo.ws.BlogApiStarter]; nested exception is java.io.FileNotFoundException: class path resource [CoreConfig.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:184)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:316)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:271)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:91)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at com.leo.ws.BlogApiStarter.main(BlogApiStarter.java:12)
+Caused by: java.io.FileNotFoundException: class path resource [CoreConfig.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180)
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:51)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:88)
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:75)
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81)
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:732)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getRelated(ConfigurationClassParser.java:1008)
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getAnnotationAttributes(ConfigurationClassParser.java:989)
+	at org.springframework.context.annotation.ConfigurationClassParser.collectImports(ConfigurationClassParser.java:539)
+	at org.springframework.context.annotation.ConfigurationClassParser.getImports(ConfigurationClassParser.java:512)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:194)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:202)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:170)
+	... 13 common frames omitted
+22-08-2018 19:00:47.448 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 9436 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:00:47.451 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:00:47.502 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1f3f4916: startup date [Wed Aug 22 19:00:47 BRT 2018]; root of context hierarchy
+22-08-2018 19:00:48.836 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$237b9c9b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:00:49.199 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:00:49.224 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:00:49.224 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:00:49.233 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:00:49.346 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:00:49.346 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1844 ms
+22-08-2018 19:00:49.419 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:00:49.428 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:00:49.428 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:00:49.428 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:00:49.429 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:00:49.555 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:00:49.797 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:00:49.841 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:00:49.858 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:00:49.937 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:00:49.939 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:00:49.975 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:00:50.080 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:00:50.501 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@40de8f93'
+22-08-2018 19:00:50.503 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:00:50.518 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:00:50.518 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:00:50.518 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:00:50.521 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:00:50.523 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:00:50.525 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:00:50.537 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:00:50.606 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:11:41.797 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 10778 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:11:41.808 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:11:41.885 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1f0f1111: startup date [Wed Aug 22 19:11:41 BRT 2018]; root of context hierarchy
+22-08-2018 19:11:43.173 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e9e6fd41] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:11:43.519 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:11:43.543 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:11:43.543 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:11:43.552 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:11:43.671 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:11:43.671 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1786 ms
+22-08-2018 19:11:43.735 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:11:43.738 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:11:43.739 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:11:43.739 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:11:43.739 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:11:43.882 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:11:44.098 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:11:44.141 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:11:44.158 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:11:44.233 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:11:44.235 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:11:44.272 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:11:44.370 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:11:44.769 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6088451e'
+22-08-2018 19:11:44.771 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:11:44.786 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:11:44.786 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:11:44.786 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:11:44.790 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:11:44.794 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:11:44.796 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:11:44.808 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:11:44.870 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:12:02.582 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 10834 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:12:02.585 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:12:02.673 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c22fc4c: startup date [Wed Aug 22 19:12:02 BRT 2018]; root of context hierarchy
+22-08-2018 19:12:03.877 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$237b9c9b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:12:04.221 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:12:04.244 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:12:04.245 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:12:04.254 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:12:04.348 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:12:04.348 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1675 ms
+22-08-2018 19:12:04.419 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:12:04.422 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:12:04.423 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:12:04.423 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:12:04.423 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:12:04.581 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:12:04.854 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:12:04.904 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:12:04.932 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:12:05.025 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:12:05.027 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:12:05.070 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:12:05.182 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:12:05.653 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2262d6d5'
+22-08-2018 19:12:05.656 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:12:05.670 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:12:05.670 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:12:05.671 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:12:05.674 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:12:05.676 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:12:05.678 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:12:05.689 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:12:05.762 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:12:41.589 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 10902 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:12:41.603 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:12:41.664 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ddced80: startup date [Wed Aug 22 19:12:41 BRT 2018]; root of context hierarchy
+22-08-2018 19:12:42.839 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4202af35] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:12:43.195 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:12:43.219 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:12:43.219 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:12:43.229 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:12:43.354 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:12:43.354 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1690 ms
+22-08-2018 19:12:43.432 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:12:43.436 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:12:43.438 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:12:43.439 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:12:43.439 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:12:43.591 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:12:43.877 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:12:43.951 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:12:43.983 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:12:44.082 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:12:44.084 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:12:44.123 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:12:44.243 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:12:44.516 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6192a5d5'
+22-08-2018 19:12:44.519 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:12:44.535 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:12:44.535 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:12:44.536 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:12:44.537 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:12:44.540 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:12:44.543 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:12:44.555 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:12:44.635 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:12:54.681 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 10941 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:12:54.684 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:12:54.744 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e316c74: startup date [Wed Aug 22 19:12:54 BRT 2018]; root of context hierarchy
+22-08-2018 19:12:56.014 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$76295aae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:12:56.350 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:12:56.374 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:12:56.374 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:12:56.385 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:12:56.537 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:12:56.538 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1794 ms
+22-08-2018 19:12:56.600 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:12:56.608 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:12:56.608 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:12:56.609 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:12:56.609 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:12:56.795 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:12:57.055 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:12:57.129 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:12:57.158 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:12:57.256 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:12:57.257 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:12:57.296 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:12:57.407 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:12:57.826 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4a92c6a9'
+22-08-2018 19:12:57.828 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:12:57.844 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:12:57.844 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:12:57.844 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:12:57.849 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:12:57.852 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:12:57.855 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:12:57.865 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:12:57.931 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:20:46.730 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 12012 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:20:46.733 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:20:46.805 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4c9f8c13: startup date [Wed Aug 22 19:20:46 BRT 2018]; root of context hierarchy
+22-08-2018 19:20:48.030 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d0f611e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:20:48.584 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:20:48.633 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:20:48.634 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:20:48.645 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:20:48.790 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:20:48.791 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1986 ms
+22-08-2018 19:20:48.851 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:20:48.855 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:20:48.857 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:20:48.857 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:20:48.857 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:20:49.065 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:20:49.300 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:20:49.343 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:20:49.359 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:20:49.423 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:20:49.424 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:20:49.458 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:20:49.567 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:20:49.983 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6a1ef65c'
+22-08-2018 19:20:49.985 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:20:50.000 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:20:50.000 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:20:50.001 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:20:50.004 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:20:50.006 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:20:50.008 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:20:50.019 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:20:50.089 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:24:23.478 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 12282 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:24:23.481 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:24:23.521 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@48aaecc3: startup date [Wed Aug 22 19:24:23 BRT 2018]; root of context hierarchy
+22-08-2018 19:24:24.889 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$578c281f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:24:25.242 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:24:25.264 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:24:25.265 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:24:25.273 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:24:25.379 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:24:25.380 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1859 ms
+22-08-2018 19:24:25.453 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:24:25.457 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:24:25.458 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:24:25.458 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:24:25.458 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:24:25.635 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:24:25.939 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:24:26.025 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:24:26.059 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:24:26.165 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:24:26.167 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:24:26.209 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:24:26.323 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:24:26.768 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@642857e0'
+22-08-2018 19:24:26.771 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:24:26.785 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:24:26.786 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:24:26.786 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:24:26.790 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:24:26.792 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:24:26.794 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:24:26.805 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:24:26.873 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:24:41.828 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 12322 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:24:41.831 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:24:41.878 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@48e4374: startup date [Wed Aug 22 19:24:41 BRT 2018]; root of context hierarchy
+22-08-2018 19:24:43.100 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$69b03999] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:24:43.452 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:24:43.477 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:24:43.477 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:24:43.487 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:24:43.587 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:24:43.589 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1711 ms
+22-08-2018 19:24:43.653 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:24:43.659 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:24:43.661 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:24:43.661 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:24:43.662 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:24:43.853 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:24:44.118 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:24:44.174 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:24:44.192 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:24:44.275 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:24:44.276 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:24:44.310 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:24:44.420 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:24:44.854 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1642eeae'
+22-08-2018 19:24:44.856 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:24:44.874 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:24:44.874 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:24:44.874 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:24:44.878 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:24:44.880 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:24:44.882 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:24:44.894 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:24:44.977 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:24:55.857 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 12360 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:24:55.860 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:24:55.935 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5e316c74: startup date [Wed Aug 22 19:24:55 BRT 2018]; root of context hierarchy
+22-08-2018 19:24:57.276 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$93d5e69c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:24:57.671 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:24:57.697 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:24:57.698 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:24:57.707 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:24:57.811 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:24:57.811 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1876 ms
+22-08-2018 19:24:57.854 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:24:57.875 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:24:57.876 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:24:57.876 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:24:57.876 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:24:58.025 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:24:58.275 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:24:58.327 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:24:58.343 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:24:58.422 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:24:58.424 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:24:58.462 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:24:58.567 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:24:58.975 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1d8b0500'
+22-08-2018 19:24:58.978 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:24:58.993 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:24:58.994 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:24:58.994 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:24:58.997 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:24:58.999 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:24:59.001 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:24:59.015 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:24:59.092 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:37:13.905 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 13322 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:37:13.908 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:37:13.979 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3eb7fc54: startup date [Wed Aug 22 19:37:13 BRT 2018]; root of context hierarchy
+22-08-2018 19:37:15.138 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3c6895f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:37:15.484 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:37:15.508 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:37:15.508 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:37:15.520 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:37:15.634 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:37:15.635 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1656 ms
+22-08-2018 19:37:15.706 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:37:15.709 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:37:15.711 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:37:15.712 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:37:15.712 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:37:15.884 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:37:16.158 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:37:16.232 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:37:16.260 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:37:16.353 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:37:16.354 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:37:16.395 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:37:16.528 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:37:17.110 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@558b4942'
+22-08-2018 19:37:17.113 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:37:17.140 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:37:17.140 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:37:17.142 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:37:17.146 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:37:17.148 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:37:17.154 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:37:17.168 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:37:17.244 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
+22-08-2018 19:38:42.151 INFO  [main] com.leo.ws.BlogApiStarter.logStarting - Starting BlogApiStarter on S2IT-UOL-0027 with PID 13419 (/home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws/target/classes started by s2it_lsilva in /home/s2it_lsilva/eclipse-workspace/backend-developer/blog-api/blog-api-ws)
+22-08-2018 19:38:42.156 INFO  [main] com.leo.ws.BlogApiStarter.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-08-2018 19:38:42.207 INFO  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3b74ac8: startup date [Wed Aug 22 19:38:42 BRT 2018]; root of context hierarchy
+22-08-2018 19:38:43.829 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e5c4cd76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+22-08-2018 19:38:44.323 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+22-08-2018 19:38:44.354 INFO  [main] o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+22-08-2018 19:38:44.355 INFO  [main] o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.32
+22-08-2018 19:38:44.366 INFO  [localhost-startStop-1] o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+22-08-2018 19:38:44.472 INFO  [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+22-08-2018 19:38:44.473 INFO  [localhost-startStop-1] o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2266 ms
+22-08-2018 19:38:44.536 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+22-08-2018 19:38:44.540 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+22-08-2018 19:38:44.540 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22-08-2018 19:38:44.540 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22-08-2018 19:38:44.540 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+22-08-2018 19:38:44.711 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+22-08-2018 19:38:44.993 INFO  [main] com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+22-08-2018 19:38:45.054 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:38:45.074 INFO  [main] o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+22-08-2018 19:38:45.169 INFO  [main] org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+22-08-2018 19:38:45.171 INFO  [main] org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+22-08-2018 19:38:45.220 INFO  [main] o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+22-08-2018 19:38:45.370 INFO  [main] org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+22-08-2018 19:38:45.896 INFO  [main] o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7e848aea'
+22-08-2018 19:38:45.899 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:38:45.919 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'postResource': Unsatisfied dependency expressed through field 'postService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.leo.blog.core.services.PostService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+22-08-2018 19:38:45.920 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+22-08-2018 19:38:45.920 INFO  [main] o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+22-08-2018 19:38:45.924 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+22-08-2018 19:38:45.927 INFO  [main] com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+22-08-2018 19:38:45.936 INFO  [main] o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+22-08-2018 19:38:45.952 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+22-08-2018 19:38:46.086 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field postService in com.leo.ws.post.PostResource required a bean of type 'com.leo.blog.core.services.PostService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.leo.blog.core.services.PostService' in your configuration.
+
