@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -70,7 +71,7 @@ public class PostResource {
 		}
 		Post post = this.postService.save(data.build());
 		PostDTO postDTO = PostDTO.from(post);
-		return ResponseEntity.ok(postDTO);
+		return ResponseEntity.status(HttpStatus.CREATED).body(postDTO);
 	}
 	
 	@DeleteMapping("/{id}")

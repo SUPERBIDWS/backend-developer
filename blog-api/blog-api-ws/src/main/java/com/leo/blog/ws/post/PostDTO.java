@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull;
 
 import com.leo.blog.core.entity.Post;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,14 +18,22 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ApiModel(value="Post", description="Classe que representa um post")
 public class PostDTO {
 	
+	@ApiModelProperty(value="Código do post")
 	private Integer id;
+	
 	@NotNull
+	@ApiModelProperty(value="data de publicação do post", example="2018-01-08T20:21:03")
 	private LocalDateTime dataPublicacao;
+	
 	@NotBlank
+	@ApiModelProperty(value="Título do post")
 	private String titulo;
+	
 	@NotBlank
+	@ApiModelProperty(value="Descrição do post")
 	private String descricao;
 	
 	public Post build() {
