@@ -9,11 +9,11 @@ import com.leo.blog.commons.exception.BindingExceptionDetails;
 
 @ControllerAdvice
 @RestController
-public class BindingExceptionControllerAdvice {
+public class ExceptionControllerAdvice {
 
   @ExceptionHandler(BindingException.class)
   public BindingExceptionDetails bindingException(BindingException ex) {
     return new BindingExceptionDetails(ex.getResults());
   }
-
+  
 }

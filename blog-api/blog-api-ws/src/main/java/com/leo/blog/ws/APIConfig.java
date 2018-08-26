@@ -16,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-@ComponentScan(basePackageClasses = {APIConfig.class})
+@ComponentScan(basePackageClasses = APIConfig.class)
 @Import({CoreConfig.class})
 public class APIConfig {
 
@@ -28,4 +28,5 @@ public class APIConfig {
 				.paths(Predicates.not(PathSelectors.regex("/error")))
 				.build();
 	}
+
 }
