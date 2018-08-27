@@ -44,7 +44,7 @@ public class PostResource {
 		return ResponseEntity.ok(pageDTO);
 	}
 	
-	@GetMapping("/titulo")
+	@GetMapping("/by-titulo")
 	public ResponseEntity<Page<PostDTO>> findByTitulo(@RequestParam String titulo, Pageable pageable){
 		Page<Post> pages = this.postService.findByTitulto(pageable, titulo);
 		Page<PostDTO> pageDTO = pages.map(PostDTO::from);
@@ -59,7 +59,12 @@ public class PostResource {
 		if(this.postService.countById(id) < 1) {
 			throw new NotFoundException();
 		}
-		Post post = this.postService.save(data.build());
+		Post post = this.postService.save(Post.builder()
+											  .id(data.getId())
+											  .titulo(data.getTitulo())
+											  .dataPublicacao(data.getDataPublicacao())
+											  .descricao(data.getDescricao())
+											  .build());
 		PostDTO postDTO = PostDTO.from(post);
 		return ResponseEntity.ok(postDTO);
 	}
