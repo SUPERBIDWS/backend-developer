@@ -1,0 +1,131 @@
+{
+	"variables": [],
+	"info": {
+		"name": "blog-api",
+		"_postman_id": "0c6fb7e0-22d6-2522-07f3-57b7d6b0973a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/post",
+			"request": {
+				"url": "http://localhost:8080/post",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/post/1",
+			"request": {
+				"url": "http://localhost:8080/post/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/post?size=2&page=1",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/post?size=2&page=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/post/1",
+			"request": {
+				"url": "http://localhost:8080/post/1",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dataPublicacao\": \"2018-08-22T21:35:00\",\n\t\"titulo\":\"Post inicial alterada\",\n\t\"descricao\":\"Primeiro post para testar a aplicação\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/post/1",
+			"request": {
+				"url": "http://localhost:8080/post/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/post/titulo?titulo=post&size=1@sort=id,DESC",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/post/titulo?titulo=post&size=1@sort=id,DESC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"post",
+						"titulo"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "post",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "1@sort=id,DESC",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
