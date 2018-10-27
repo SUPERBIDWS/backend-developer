@@ -1,3 +1,19 @@
+# Superbid Webservices - Desafio Blog REST API
+
+* [Quer fazer parte da Superbid Webservices?](#quer-fazer-parte-da-superbid-webservices)
+* [Questionário](#questionário)
+* [Teste prático (prazo 3 dias)](#teste-prático-(prazo-3-dias))
+* [Tecnologias utilizadas](#tecnologias-utilizadas)
+* [Critérios a serem avaliados](#critérios-a-serem-avaliados:)
+
+
+* [Como usar](#como-usar)
+* [Quais ferramentas foram usadas](#quais-ferramentas-foram-usadas)
+* [Infraestrutura adicional](#infraestrutura-adicional)
+* [Como executar, testar, empacotar e entregar o projeto](#como-executar-testar-empacotar-e-entregar-o-projeto)
+* [Instruções para ambiente de produção](#instruções-para-ambiente-de-produção)
+
+
 # Quer fazer parte da Superbid Webservices?
 
 Obrigado por se interessar em fazer parte do nosso time!
