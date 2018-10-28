@@ -155,3 +155,33 @@ cd target
 java -jar blog-server-0.0.1.jar
 ``` 
  
+## Instruções para ambiente de produção
+
+- [ ]  JDK 8 ou superior deve estar instalado na máquina que os microservicos
+- [ ]  Liberar portas no firewall, conforme [Infraestrutura adicional](#infraestrutura-adicional)
+- [ ]  Criar uma pasta com nome "**blog-server**" 
+- [ ]  Copiar os arquivos gerado na seção [Como executar, testar, empacotar e entregar o projeto](#como-executar-testar-empacotar-e-entregar-o-projeto) para a pasta criada no passo anterior
+- [ ]  Executar o comando: 
+
+```
+java -jar blog-server-0.0.1.jar
+```
+
+- [ ]  Para verificar se o serviço está rodando execute:
+
+```
+curl -X GET "http://localhost:8080/manage/health"
+```
+
+- [ ]  Retornou '{"status":"UP"}' no passo anterior? Tudo Ok e funcionando, pode utilizar todas as urls descritas em na seção [Como usar](#como-usar). 
+- [ ]  Não funcionou? mande um e-mail com a mensagem de erro para p5f8@hotmail.com. Obrigado.
+
+## Instruções para monitoramento
+
+- [ ] Executar o comando abaixo para verificar se o serviço está no ar e deve retornar '{"status":"UP"}':
+```
+curl -X GET "http://localhost:8080/manage/health"
+```
+- [ ] Logs de INFO são gerados no stdout padrão (console)
+- [ ] Logs de ERROR são gerados no stderr padrão (console)
+- [ ]  Não funcionou? mande um e-mail com a mensagem de erro para p5f8@hotmail.com. Obrigado.
