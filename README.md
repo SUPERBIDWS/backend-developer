@@ -94,3 +94,33 @@ Uma dica: pense no teste prático como sendo um algo real que você faria ou gos
 
 * [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
+ou
+
+| O quê você deseja fazer | Comando curl   | Resposta |
+|-------------------------|----------------|----------|
+| Listar todas os posts do blog | curl -X GET -H 'Content-Type: application/json' "http://localhost:8080/v1/blog/" | lista(array) de posts do blog em formato json |
+| Criar um post | curl -XPOST -H'Content-Type: application/json;charset=utf-8' -d'{ "titulo" : "Titulo do post", "descricao" : "descricao qualquer", "dataPublicacao" : "2018-10-28T21:20:01.735Z" }'  http://localhost:8080/v1/blog/ | post do blog em formato json com campo id preenchido |
+| Atualizar um post | curl -X PUT -H 'Content-Type: application/json' -d '{  "dataPublicacao": "2018-10-29T14:23:09.632Z", "titulo": "Titulo do post atualizado 2",  "descricao": "descricao qualquer atualizado 2", "id": 1 }' 'http://localhost:8080/v1/blog/<ID_DO_POST>' | post do blog em formato json |
+| Consultar um post| curl -X GET -H 'Content-Type: application/json' "http://localhost:8080/v1/blog/<ID_DO_POST>" | post do blog formato json |
+| Apagar um post | curl -X DELETE -H 'Content-Type: application/json' "http://localhost:8080/v1/blog/<ID_DO_POST>" | string "ok" |
+
+## Quais ferramentas foram usadas
+
+| Ferramenta | Link para download |
+|------------|--------------------|
+|Java Development Kit 8 64 bits para Windows 10 javac versão 1.8.0_181 | (http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html) |
+| Maven 3.5.4 para Windows | (https://maven.apache.org/download.cgi) |
+| IntelliJ IDEA Community Edition para Windows 10 | (https://www.jetbrains.com/idea/download/#section=windows) |
+| Spring Boot 2.0.5.RELEASE | (https://start.spring.io/) |
+| Curl 64 bits para Windows 64bits | (https://curl.haxx.se/download.html#Win64) |
+| Lombok 1.18.2 | https://projectlombok.org/download) |
+
+## Infraestrutura adicional
+
+### Porta do serviço
+
+* A porta padrão para rodar dos serviços é:
+
+```
+8080 = ms-command-lojas
+```
