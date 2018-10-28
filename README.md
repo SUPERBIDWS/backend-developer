@@ -122,5 +122,5 @@ ou
 * A porta padrão para rodar dos serviços é:
 
 ```
-8080 = ms-command-lojas
+8080 = blog-server
 ```
