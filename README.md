@@ -124,3 +124,33 @@ ou
 ```
 8080 = blog-server
 ```
+
+## Como executar, testar, empacotar e entregar o projeto
+
+1. Baixar e instalar o Java 1.8 ou superior
+2. Baixar e instalar o Maven 3.5.4 ou superior
+3. Baixar os fontes
+
+```
+git clone https://github.com/p5f8/backend-developer.git
+cd backend-developer
+```
+
+4. Verificar arquivo src/main/resources/application.properties
+
+	> Confirmar a porta do Serviço (conforme [Porta do serviço](#porta-do-serviço))
+	 
+5. Gerar o pacote Java em formato Jar
+
+```
+mvn clean install
+```
+
+> Dentro da pasta target, verificar a existência do arquivo: blog-server-0.0.1.jar
+
+6. Executar os comandos abaixo:
+
+``` 
+cd target
+java -jar blog-server-0.0.1.jar
+``` 
