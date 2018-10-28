@@ -89,3 +89,8 @@ Considerando a funcionalidade de um blog, construa uma API Rest contendo as oper
 * Qualquer critério que vocês considere pertinente
 
 Uma dica: pense no teste prático como sendo um algo real que você faria ou gostaria de fazer no seu trabalho, pois esse será o seu cartão de visitas.
+
+## Como usar 
+
+* [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
