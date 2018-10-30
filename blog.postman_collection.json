@@ -1,0 +1,163 @@
+{
+	"id": "3d58971d-b92a-ab88-bf5e-2b96dd739958",
+	"name": "blog",
+	"description": "",
+	"order": [
+		"5382e3de-8a3d-96ce-5b25-f9ed2decb030",
+		"c4c55993-398f-e96b-8ae4-c4c782ee3b37",
+		"8413fdfa-55cf-e541-7ebc-af95db614da6",
+		"dc8428a9-600d-47a6-4f8c-9480b9ed10a7",
+		"4e83cfa6-13ee-2492-5335-a1dd40646b65"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1540837558288,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "4e83cfa6-13ee-2492-5335-a1dd40646b65",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/posts/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1540884543299,
+			"name": "Delete",
+			"description": "",
+			"collectionId": "3d58971d-b92a-ab88-bf5e-2b96dd739958",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "5382e3de-8a3d-96ce-5b25-f9ed2decb030",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/posts/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1540880067594,
+			"name": "Insert",
+			"description": "",
+			"collectionId": "3d58971d-b92a-ab88-bf5e-2b96dd739958",
+			"responses": [],
+			"rawModeData": "{\n\t\"title\" : \"Eleições 2018\",\n\t\"description\" : \"Uma das eleições mais polarizadas.\"\n}"
+		},
+		{
+			"id": "8413fdfa-55cf-e541-7ebc-af95db614da6",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/posts/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1540886002701,
+			"name": "Find By Id",
+			"description": "",
+			"collectionId": "3d58971d-b92a-ab88-bf5e-2b96dd739958",
+			"responses": []
+		},
+		{
+			"id": "c4c55993-398f-e96b-8ae4-c4c782ee3b37",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/posts/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1540892138557,
+			"name": "Update",
+			"description": "",
+			"collectionId": "3d58971d-b92a-ab88-bf5e-2b96dd739958",
+			"responses": [],
+			"rawModeData": "{\n\t\"title\" : \"Eleições 2019\",\n\t\"description\" : \"Uma das eleições mais polarizadas.\"\n}"
+		},
+		{
+			"id": "dc8428a9-600d-47a6-4f8c-9480b9ed10a7",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/posts/?page=1&size=10",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1540841443369,
+			"name": "Find All",
+			"description": "",
+			"collectionId": "3d58971d-b92a-ab88-bf5e-2b96dd739958",
+			"responses": []
+		}
+	]
+}
