@@ -2,6 +2,7 @@ package net.superbid.controller;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import net.superbid.dto.PostDTO;
 import net.superbid.entity.Post;
 
 import static io.restassured.RestAssured.get;
@@ -50,58 +51,28 @@ public class PostControllerTest {
 	@Test
 	public void buscaPostPorIdEVerificaConteudo() {
 
-		JsonPath jsonPath = given().header("Accept", "application/json")
-				.get("/blog/post/1001")
-				.andReturn().jsonPath();
+		JsonPath jsonPath = given().header("Accept", "application/json").get("/blog/post/1001").andReturn().jsonPath();
 
-		Post post = jsonPath.getObject("",Post.class);
+		Post post = jsonPath.getObject("", Post.class);
 		assertEquals(1001l, post.getId(), 00001);
 	}
-	
+
 	@Test
 	public void buscaPostPorIdInvalidoEVerificaStatusCode() {
 		get("/blog/post/1003").then().statusCode(404);
 	}
-	
+
 	@Test
 	public void adicionaUmPostEVerificaRetorno() {
-		
-		Post post = new Post();
-		post.setId(1003l);
+
+		PostDTO post = new PostDTO();
 		post.setDataPublicacao(LocalDate.now());
 		post.setTitulo("Titulo 3");
 		post.setDescricao("Terceira descricao para testes api");
-		
-		JsonPath jsonPath = given().header("Accept", "application/json")
-					.contentType("application/json")
-					.body(post)
-				.when()
-					.post("/blog/post")	
-				.andReturn()
-					.jsonPath();
-		
-		Post postCriado = jsonPath.getObject("post", Post.class );		
-		assertEquals(1003l, postCriado.getId(), 00001);
-		
+
+		given().header("Accept", "application/json").contentType("application/json").body(post).expect().statusCode(201)
+				.when().post("/blog/post");
 
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
