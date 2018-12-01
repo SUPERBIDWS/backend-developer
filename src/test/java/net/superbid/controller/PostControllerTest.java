@@ -10,6 +10,8 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.junit.Assert.assertEquals;
 
+import java.time.LocalDate;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -53,7 +55,6 @@ public class PostControllerTest {
 				.andReturn().jsonPath();
 
 		Post post = jsonPath.getObject("",Post.class);
-		System.out.println(post.toString());
 		assertEquals(1001l, post.getId(), 00001);
 	}
 	
@@ -61,5 +62,46 @@ public class PostControllerTest {
 	public void buscaPostPorIdInvalidoEVerificaStatusCode() {
 		get("/blog/post/1003").then().statusCode(404);
 	}
+	
+	@Test
+	public void adicionaUmPostEVerificaRetorno() {
+		
+		Post post = new Post();
+		post.setId(1003l);
+		post.setDataPublicacao(LocalDate.now());
+		post.setTitulo("Titulo 3");
+		post.setDescricao("Terceira descricao para testes api");
+		
+		JsonPath jsonPath = given().header("Accept", "application/json")
+					.contentType("application/json")
+					.body(post)
+				.when()
+					.post("/blog/post")	
+				.andReturn()
+					.jsonPath();
+		
+		Post postCriado = jsonPath.getObject("post", Post.class );		
+		assertEquals(1003l, postCriado.getId(), 00001);
+		
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
