@@ -42,6 +42,14 @@ public class Post implements Serializable {
 		this.descricao = descricao;
 	}
 	
+	@Override
+	public String toString() {
+		return "Post [id=" + id + ", dataPublicacao=" + dataPublicacao + ", titulo=" + titulo + ", descricao="
+				+ descricao + "]";
+	}
+	
+	
+	
 	
 	
 }
