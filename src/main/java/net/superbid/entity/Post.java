@@ -17,6 +17,19 @@ public class Post implements Serializable {
 	private String titulo;
 	private String descricao;
 	
+	
+	
+	public Post() {
+	}
+	
+	
+	
+	public Post(Long id) {
+		this.id = id;
+	}
+
+
+
 	public Long getId() {
 		return id;
 	}

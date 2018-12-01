@@ -40,6 +40,13 @@ public class PostServices {
 		return postRepository.save(post);
 	}
 
+	public Post deletar(Long id) {
+		
+		Post post = postRepository.findById(id).get();
+		return post;
+		
+	}
+
 	
 	
 	

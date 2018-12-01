@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,13 +26,13 @@ import net.superbid.entity.Post;
 import net.superbid.services.PostServices;
 
 @RestController
-@RequestMapping("/blog")
+@RequestMapping("/blog/post")
 public class PostController {
 
 	@Autowired
 	private PostServices postServices;
 
-	@GetMapping("/post")
+	@GetMapping()
 	public ResponseEntity<Map<String, Object>> listar() {
 
 		List<Post> posts = postServices.listar();
@@ -41,7 +42,7 @@ public class PostController {
 		return ResponseEntity.status(HttpStatus.OK).body(retorno);
 	}
 
-	@GetMapping("/post/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Post> buscaPostPorId(@PathVariable Long id) {
 
 		Optional<Post> post = postServices.buscaId(id);
@@ -51,10 +52,10 @@ public class PostController {
 
 		return ResponseEntity.status(HttpStatus.OK).body(post.get());
 	}
-	
-	@PostMapping("post")
+
+	@PostMapping()
 	public ResponseEntity<Post> persistirPost(@Valid @RequestBody PostDTO postDTO, BindingResult result) {
-		
+
 		if (result.hasErrors()) {
 			return ResponseEntity.badRequest().body(new Post());
 		}
@@ -64,11 +65,12 @@ public class PostController {
 				.toUri();
 
 		return ResponseEntity.created(location).body(postSalvo);
-		
 	}
-	
-	
-	
-	
+
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Post> delete(@PathVariable Long id) {
+		Post post = postServices.deletar(id);
+		return ResponseEntity.status(HttpStatus.OK).body(post);
+	}
 
 }
