@@ -39,7 +39,6 @@ public class PostController {
 	public ResponseEntity<Post> postPorId(@PathVariable Long id) {
 		
 		Optional<Post> post = postServices.buscaId(id);
-		
 
 		if (!post.isPresent()) 
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(post.get());
