@@ -48,10 +48,13 @@ public class PostControllerTest {
 	@Test
 	public void buscaPostPorIdEVerificaConteudo() {
 
-		JsonPath jsonPath = given().header("Accept", "application/json").get("/blog/post/1001")
+		JsonPath jsonPath = given().header("Accept", "application/json")
+				
+				.get("/blog/post/1001")
 				.andReturn().jsonPath();
 
-		Post post = jsonPath.getObject("posts[0]", Post.class);
+		Post post = jsonPath.getObject("",Post.class);
+		System.out.println(post.toString());
 		assertEquals(1001l, post.getId(), 00001);
 
 	}

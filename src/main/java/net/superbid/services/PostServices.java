@@ -1,6 +1,7 @@
 package net.superbid.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,12 @@ public class PostServices {
 	
 	public List<Post> listar() {
 		return postRepository.findAll();
+	}
+
+	public Optional<Post> buscaId(Long id) {
+		
+		 Optional<Post> post = postRepository.findById(id);
+		 return post;
 	}
 
 }
