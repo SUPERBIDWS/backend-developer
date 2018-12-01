@@ -1,5 +1,6 @@
 package net.superbid.entity;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -7,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Post {
+public class Post implements Serializable {
 
 	@Id
 	@GeneratedValue
