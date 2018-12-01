@@ -41,7 +41,7 @@ public class PostController {
 		Optional<Post> post = postServices.buscaId(id);
 
 		if (!post.isPresent()) 
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(post.get());
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new Post());
 		
 		return ResponseEntity.status(HttpStatus.OK).body(post.get());
 }
