@@ -7,6 +7,7 @@ import net.superbid.entity.Post;
 
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.delete;
 
 import static io.restassured.http.ContentType.JSON;
 import static org.junit.Assert.assertEquals;
@@ -63,7 +64,7 @@ public class PostControllerTest {
 	}
 
 	@Test
-	public void adicionaUmPostEVerificaRetorno() {
+	public void adicionaUmPostEVerificaStatusCode() {
 
 		PostDTO post = new PostDTO();
 		post.setDataPublicacao(LocalDate.now());
@@ -73,6 +74,12 @@ public class PostControllerTest {
 		given().header("Accept", "application/json").contentType("application/json").body(post).expect().statusCode(201)
 				.when().post("/blog/post");
 
+	}
+
+	@Test
+	public void excluirUmPostEVerificaStatusCode() {
+
+		delete("/blog/post/1001").then().statusCode(200);
 	}
 
 }
