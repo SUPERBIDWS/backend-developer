@@ -37,21 +37,23 @@ public class PostControllerTest {
 	@Test
 	public void buscaTodosOsPostsEVerificaOConteudo() {
 
-		JsonPath jsonPath = given()
-			.header("Accept", "application/json")
-			.get("/blog/post")
-			.andReturn()
-			.jsonPath();
-		
+		JsonPath jsonPath = given().header("Accept", "application/json").get("/blog/post").andReturn().jsonPath();
+
 		Post post1 = jsonPath.getObject("posts[0]", Post.class);
 		Post post2 = jsonPath.getObject("posts[1]", Post.class);
-		
 		assertEquals(1001l, post1.getId(), 00001);
 		assertEquals(1002l, post2.getId(), 00001);
-		
-	
-		
-		
+	}
+
+	@Test
+	public void buscaPostPorIdEVerificaConteudo() {
+
+		JsonPath jsonPath = given().header("Accept", "application/json").get("/blog/post/1001")
+				.andReturn().jsonPath();
+
+		Post post = jsonPath.getObject("posts[0]", Post.class);
+		assertEquals(1001l, post.getId(), 00001);
+
 	}
 
 }
