@@ -106,6 +106,7 @@ Meu github é: https://github.com/lincolnppires.
 Tenho repositorios de aplicações Spring, Microservices com kubernetes, Api Rest, design patters com Python e alguns outros.
 
 * Você conhece CI/CD? Já chegou a fazer algum pipeline de CI/CD completo?
+
 Conheço. Onde trabalhava anteriormente estavamos no processo de implantação de CI. Utilizavamos o Jenkins.
 
 * Você já trabalhou com SCRUM ou Kanban?
