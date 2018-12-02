@@ -1,16 +1,40 @@
-# Quer fazer parte da Superbid Webservices?
+# Superbid Webservices
 
-Obrigado por se interessar em fazer parte do nosso time!
+# Teste prático 
 
-Esse teste faz parte de uma das etapas do nosso processo de seleção e o objetivo é avaliarmos o seu nível de conhecimento nas tecnologias que usamos. Nesse teste você terá 2 tarefas:
+API Rest desenvolvida utilizando a metodologia Test Driven Development (TDD).
+Optou-se por consumir / produzir objetos JavaScript Object Notation (JSON) nos corpos da requisição e resposta. 
 
-* responder um questionário sobre tecnologia e metodologia de desenvolvimento
-* construir uma aplicação simples para termos ideia de como é o seu código e o que você considera importante em um projeto
+## Tecnologias utilizadas
 
-O questionário e a especificação da aplicação estão logo abaixo.
+* Spring Model-View-Controller: Fornece as anotações e a estrutura necessária para criar os pontos de extremidade REST por meio de HTTP.
+* Spring Boot: Fornece uma estrutura de convenção sobre configuração e permite desenvolver e lançar serviço da Web no padrão do Spring.
+* Apache Maven: Ferramenta de gerenciamento de compilação e dependência usada para criar, executar testes e empacotar serviço da Web em um arquivo JAR.
+* JUnit: Para realizar testes unitários automatizados.
+* Rest-assure: Framework para testar e validar serviços REST. 
+* Postman: Ferramenta para testar e validar serviços REST. 
+* Java 8: Linguagem de programação
+* Git / GitHub: Ferramenta para versionamento do código
+* H2: Banco de dados em memória
 
-**A sua entrega será feita através de um Pull Request nesse repositório**. Faça um fork do repositório, implemente o seu código, responda as questões no `README.md` e faça um pull request. Sinta-se a vontade para colocar quaisquer outras informações que você considere pertinente no `README`.
+## Plano de ação:
+	
+	Definição das entidades - representação do post
+	Definição dos repositorios - interação com o banco de dados
+	Definição dos testes  
+	Definição dos controller - mapeamento dos endpoints da aplicação
+	Definição dos serviços - implementação das regras de negócio
+	Definição DTO - para transferência de dados
+		
+REST Endpoints:
+	
+	GET: http://localhost:8080/blog/post -> Recupera a lista de todos os posts do blog -> 200 OK
+	GET: http://localhost:8080/blog/post/{id} -> Recupera um post de acordo com o id -> 200 OK  ou 404 Not Found
+	POST: http://localhost:8080/blog/post/ -> Adiciona / atualiza um post de acordo com o payload da requisição -> 201 Created ou 400 Bad Request
+	DELETE: http://localhost:8080/blog/post/{id} ->  Exclui um post de acordo com o id passado -> 200 OK
 
+**Devido a API ser apenas um protótipo optou-se por fazer a atualização utilizando o verbo POST ao invés do verbo PUT**. 
+ 
 # Questionário
 
 * Você já trabalhou com Spring Boot?
@@ -30,30 +54,4 @@ O questionário e a especificação da aplicação estão logo abaixo.
 * Você já trabalhou com SCRUM ou Kanban?
 * Conte um pouco sobre como foi fazer parte de um time ágil, quais dificuldades tiveram e como conseguiram superar.
 
-# Teste prático (prazo 3 dias)
 
-Considerando a funcionalidade de um blog, construa uma API Rest contendo as operações de básicas de CRUD: inclusão, atualização, exclusão e consulta. O recurso em questão deve ter a seguinte estrutura:
-
-* Post
-* ID
-* Data de Publicação
-* Título
-* Descrição
-
-## Tecnologias utilizadas 
-
-* Spring Boot
-* Java 8
-* Hibernate
-* Banco de dados em memória
-* Postman Collection (para testes da api)
-
-## Critérios a serem avaliados:
-
-* Qualidade de Código
-* Cobertura de Testes
-* Definição dos Serviços Rest
-* Documentação
-* Qualquer critério que vocês considere pertinente
-
-Uma dica: pense no teste prático como sendo um algo real que você faria ou gostaria de fazer no seu trabalho, pois esse será o seu cartão de visitas.
