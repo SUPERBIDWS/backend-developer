@@ -69,6 +69,7 @@ utilizam sistemas monolito. Porém, tenho estudado e desenvolvido APIs em projet
 Ainda não tive esta oportunidade.
 
 * Como você controla o acesso à API?
+
 Para proteger a APIs iria fazer uso de um certificados do lado do servidor e Spring Security junto com OAuth2 para proteger os pontos de extremidade.
 
 * Como você trata questões da evolução das APIs?
@@ -78,6 +79,7 @@ Se for preciso alterar a interface normalmente não será possível forçar todo
 iria pelo caminho da implementação de novas versões de forma incremental de maneira que as versões novas e antigas sejam executadas simultaneamente. 
 
 * Você acha válido fazer testes automatizados?
+
 Extremamente válido. Entendo que é uma das principais formas de garantir a qualidade da aplicação e o caminho para se chegar ao Continuous Deployment.
 
 * Imagine que você precisa construir uma API que vai ter um grande número de acessos. Como você garante que ela terá um tempo de resposta acessível durante um pico de acesso?
@@ -85,12 +87,15 @@ Extremamente válido. Entendo que é uma das principais formas de garantir a qua
 Através da escalabilidade. Iria planejar um número suficiente de instâncias da API para atender a demanda.
 
 * Você conhece ou já trabalhou com containers?
+
 Sim. Conheco Docker.
 
 * E orquestradores tipo Kubernetes ou Docker Swarm?
+
 Sim. Conheco os dois.
 
 * Fale um pouco sobre o processo de versionamento de aplicações. Conhece Git?
+
 Gosto muito de trabalhar com pequenos commits, entendo que assim é mais fácil para fazer o merge.
 Conheço e trabalho com git a algum tempo.
 
