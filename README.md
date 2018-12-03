@@ -110,6 +110,7 @@ Tenho repositorios de aplicações Spring, Microservices com kubernetes, Api Res
 Conheço. Onde trabalhava anteriormente estavamos no processo de implantação de CI. Utilizavamos o Jenkins.
 
 * Você já trabalhou com SCRUM ou Kanban?
+
 Conheço as duas metodologias. Gosto muito do SCRUM. Trabalhava com o SCRUM de forma adaptada.
 
 * Conte um pouco sobre como foi fazer parte de um time ágil, quais dificuldades tiveram e como conseguiram superar.
