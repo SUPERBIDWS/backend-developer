@@ -54,6 +54,6 @@ Considerando a funcionalidade de um blog, construa uma API Rest contendo as oper
 * Cobertura de Testes
 * Definição dos Serviços Rest
 * Documentação
-* Qualquer critério que vocês considere pertinente
+* Qualquer critério que você considere pertinente
 
 Uma dica: pense no teste prático como sendo um algo real que você faria ou gostaria de fazer no seu trabalho, pois esse será o seu cartão de visitas.
