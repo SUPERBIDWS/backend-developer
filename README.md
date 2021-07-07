@@ -1,3 +1,19 @@
+# Superbid Webservices - Desafio Blog REST API
+
+* [Quer fazer parte da Superbid Webservices?](#quer-fazer-parte-da-superbid-webservices)
+* [Questionário respondido](#questionário)
+* [Teste prático (prazo 3 dias)](#teste-prático-prazo-3-dias)
+* [Tecnologias utilizadas](#tecnologias-utilizadas)
+* [Critérios a serem avaliados](#critérios-a-serem-avaliados)
+
+
+* [Como usar](#como-usar)
+* [Quais ferramentas foram usadas](#quais-ferramentas-foram-usadas)
+* [Infraestrutura adicional](#infraestrutura-adicional)
+* [Como executar, testar, empacotar e entregar o projeto](#como-executar-testar-empacotar-e-entregar-o-projeto)
+* [Instruções para ambiente de produção](#instruções-para-ambiente-de-produção)
+
+
 # Quer fazer parte da Superbid Webservices?
 
 Obrigado por se interessar em fazer parte do nosso time!
@@ -14,21 +30,37 @@ O questionário e a especificação da aplicação estão logo abaixo.
 # Questionário
 
 * Você já trabalhou com Spring Boot?
+> Sim. Trabalho com Spring Boot desde 2016. 
 * O que você conhece sobre micro-serviços?
+> Sobre micro-serviços eu tenho experiência com Spring Boot desde a criação, testes até o deploy utilizando docker. Claro tudo com o adorado Jenkins. :-)
 * Cite algumas vantagens e desvantagens de usar esse modelo arquitetural
+> A principal vantagem é que cada serviço é responsável por um domínio(ou entidade) como diz Eric Evans. A principal desvantagem que vejo é que para testar você têm que criar vários projetos e dependendo do tamanho do projeto dá um trabalho monstro. Porém é legal. :-)
 * Qual a sua experiência na construção de APIs?
+> Possuo experiência na construção de APIs internas apenas, preferencialmente, utilizando a notação /version/entity.
 * Alguma vez já teve que construir uma API pública?
+> Não tive a oportunidade de trabalhar na construção de API públicas, já consumi várias porém construir ainda nenhuma. :-( 
 * Como você controla o acesso à API?
+> Utilizando Oauth ou Oauth2, preferencialmente com Bearer Authentication.
 * Como você trata questões da evolução das APIs?
+> A evolução das APIs eu deixo sempre a antiga rodando, e crio sempre uma nova, quando possível, utilizando a notação /version/entity.
 * Você acha válido fazer testes automatizados?
+> Sim, acho muito importante tanto a utilização de testes unitários no backend e BDD nos testes automatizados integrados ou regressivos.
 * Imagine que você precisa construir uma API que vai ter um grande número de acessos. Como você garante que ela terá um tempo de resposta acessível durante um pico de acesso?
+> Neste tipo de problema eu gosto de utilizar filas, geralmente RabbitMQ, Kafka ou até mesmo o Redis já me ajudaram bastante. 
 * Você conhece ou já trabalhou com containers?
+> Sim já trabalho com conteiners docker a 3 anos.
 * E orquestradores tipo Kubernetes ou Docker Swarm?
+> K8s eu nunca utilizei, já trabalhei com Docker Swarm por 2 anos.
 * Fale um pouco sobre o processo de versionamento de aplicações. Conhece Git?
+> Gosto muito de utilizar o Git/BitBucket/GitLab facilita muito nossa vida de dev, para os casos que fazemos algumas besteiras no código e é possível retornar a versão anterior/original. 
 * Como você usa branches, tags, etc. Tem algo no Github ou Gitlab?
+> Sim, utilizo branches sempre que preciso incluir uma nova característica no código ou então dar manutenção, assim facilita o merge e separa o código bom do código novo(com possíveis bugs). E tagueamente(tag) eu ainda não sei fazer. 
 * Você conhece CI/CD? Já chegou a fazer algum pipeline de CI/CD completo?
+> Sim já trabalhei com CI com jenkins e docker efetuando deploy em homologação, CD eu ainda não tive a oportunidade de trabalhar.
 * Você já trabalhou com SCRUM ou Kanban?
+> Sim trabalho com SCRUM(pre-planning,planning,sprint 20 dias,daily, review e retro) e Kanban (JIRA) desde 2016.
 * Conte um pouco sobre como foi fazer parte de um time ágil, quais dificuldades tiveram e como conseguiram superar.
+> Eu gosto muito de fazer parte de um time ágil, porém uma das dificuldades que percebo em alguns times é que alguns membros não entregam o que prometem na daily e nem comunicam os outros membros do time, e o pior é que o membro não comunica os bloqueios durante a daily então dessa forma fica realmente dificil de ajudar. Até hoje não sei se é vergonha de pedir ajuda ou é a educação da pessoa. Talvez um dia eu estude mais sobre isso. :-)
 
 # Teste prático (prazo 3 dias)
 
@@ -48,7 +80,7 @@ Considerando a funcionalidade de um blog, construa uma API Rest contendo as oper
 * Banco de dados em memória
 * Postman Collection (para testes da api)
 
-## Critérios a serem avaliados:
+## Critérios a serem avaliados
 
 * Qualidade de Código
 * Cobertura de Testes
@@ -57,3 +89,99 @@ Considerando a funcionalidade de um blog, construa uma API Rest contendo as oper
 * Qualquer critério que você considere pertinente
 
 Uma dica: pense no teste prático como sendo um algo real que você faria ou gostaria de fazer no seu trabalho, pois esse será o seu cartão de visitas.
+
+## Como usar 
+
+* [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+ou
+
+| O quê você deseja fazer | Comando curl   | Resposta |
+|-------------------------|----------------|----------|
+| Listar todas os posts do blog | curl -X GET -H 'Content-Type: application/json' "http://localhost:8080/v1/blog/" | lista(array) de posts do blog em formato json |
+| Criar um post | curl -XPOST -H'Content-Type: application/json;charset=utf-8' -d'{ "titulo" : "Titulo do post", "descricao" : "descricao qualquer", "dataPublicacao" : "2018-10-28T21:20:01.735Z" }'  http://localhost:8080/v1/blog/ | post do blog em formato json com campo id preenchido |
+| Atualizar um post | curl -X PUT -H 'Content-Type: application/json' -d '{  "dataPublicacao": "2018-10-29T14:23:09.632Z", "titulo": "Titulo do post atualizado 2",  "descricao": "descricao qualquer atualizado 2", "id": 1 }' 'http://localhost:8080/v1/blog/<ID_DO_POST>' | post do blog em formato json |
+| Consultar um post| curl -X GET -H 'Content-Type: application/json' "http://localhost:8080/v1/blog/<ID_DO_POST>" | post do blog formato json |
+| Apagar um post | curl -X DELETE -H 'Content-Type: application/json' "http://localhost:8080/v1/blog/<ID_DO_POST>" | string "ok" |
+
+## Quais ferramentas foram usadas
+
+| Ferramenta | Link para download |
+|------------|--------------------|
+|Java Development Kit 8 64 bits para Windows 10 javac versão 1.8.0_181 | (http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html) |
+| Maven 3.5.4 para Windows | (https://maven.apache.org/download.cgi) |
+| IntelliJ IDEA Community Edition para Windows 10 | (https://www.jetbrains.com/idea/download/#section=windows) |
+| Spring Boot 2.0.5.RELEASE | (https://start.spring.io/) |
+| Curl 64 bits para Windows 64bits | (https://curl.haxx.se/download.html#Win64) |
+| Lombok 1.18.2 | https://projectlombok.org/download) |
+
+## Infraestrutura adicional
+
+### Porta do serviço
+
+* A porta padrão para rodar dos serviços é:
+
+```
+8080 = blog-server
+```
+
+## Como executar, testar, empacotar e entregar o projeto
+
+1. Baixar e instalar o Java 1.8 ou superior
+2. Baixar e instalar o Maven 3.5.4 ou superior
+3. Baixar os fontes
+
+```
+git clone https://github.com/p5f8/backend-developer.git
+cd backend-developer
+```
+
+4. Verificar arquivo src/main/resources/application.properties
+
+	> Confirmar a porta do Serviço (conforme [Porta do serviço](#porta-do-serviço))
+	 
+5. Gerar o pacote Java em formato Jar
+
+```
+mvn clean install
+```
+
+> Dentro da pasta target, verificar a existência do arquivo: blog-server-0.0.1.jar
+
+6. Executar os comandos abaixo:
+
+``` 
+cd target
+java -jar blog-server-0.0.1.jar
+``` 
+ 
+## Instruções para ambiente de produção
+
+- [ ]  JDK 8 ou superior deve estar instalado na máquina que os microservicos
+- [ ]  Liberar portas no firewall, conforme [Infraestrutura adicional](#infraestrutura-adicional)
+- [ ]  Criar uma pasta com nome "**blog-server**" 
+- [ ]  Copiar os arquivos gerado na seção [Como executar, testar, empacotar e entregar o projeto](#como-executar-testar-empacotar-e-entregar-o-projeto) para a pasta criada no passo anterior
+- [ ]  Executar o comando: 
+
+```
+java -jar blog-server-0.0.1.jar
+```
+
+- [ ]  Para verificar se o serviço está rodando execute:
+
+```
+curl -X GET "http://localhost:8080/manage/health"
+```
+
+- [ ]  Retornou '{"status":"UP"}' no passo anterior? Tudo Ok e funcionando, pode utilizar todas as urls descritas em na seção [Como usar](#como-usar). 
+- [ ]  Não funcionou? mande um e-mail com a mensagem de erro para p5f8@hotmail.com. Obrigado.
+
+## Instruções para monitoramento
+
+- [ ] Executar o comando abaixo para verificar se o serviço está no ar e deve retornar '{"status":"UP"}':
+```
+curl -X GET "http://localhost:8080/manage/health"
+```
+- [ ] Logs de INFO são gerados no stdout padrão (console)
+- [ ] Logs de ERROR são gerados no stderr padrão (console)
+- [ ]  Não funcionou? mande um e-mail com a mensagem de erro para p5f8@hotmail.com. Obrigado.
